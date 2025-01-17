@@ -1,7 +1,7 @@
 
 # VM Translator
 
-This project translates virtual machine (VM) instructions to Hack assembly code. It is implemented in OCaml and utilizes a number of key concepts like syntax tree generation, parsing, and symbol table management.
+This project translates virtual machine (VM) instructions to Hack assembly code. It is implemented in OCaml and utilizes a number of key concepts like syntax tree generation, parsing, and symbol table management.The build and execution of the project are managed using Dune.
 
 ## Prerequisites
 
