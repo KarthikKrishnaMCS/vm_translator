@@ -1,0 +1,6 @@
+description = ""
+requires = ""
+archive(byte) = "jackvm.cma"
+archive(native) = "jackvm.cmxa"
+plugin(byte) = "jackvm.cma"
+plugin(native) = "jackvm.cmxs"

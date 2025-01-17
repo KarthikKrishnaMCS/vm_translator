@@ -1,0 +1,30 @@
+lib: [
+  "_build/install/default/lib/jackvm/META"
+  "_build/install/default/lib/jackvm/ast.ml"
+  "_build/install/default/lib/jackvm/dune-package"
+  "_build/install/default/lib/jackvm/jackvm.a"
+  "_build/install/default/lib/jackvm/jackvm.cma"
+  "_build/install/default/lib/jackvm/jackvm.cmi"
+  "_build/install/default/lib/jackvm/jackvm.cmt"
+  "_build/install/default/lib/jackvm/jackvm.cmx"
+  "_build/install/default/lib/jackvm/jackvm.cmxa"
+  "_build/install/default/lib/jackvm/jackvm.ml"
+  "_build/install/default/lib/jackvm/jackvm__Ast.cmi"
+  "_build/install/default/lib/jackvm/jackvm__Ast.cmt"
+  "_build/install/default/lib/jackvm/jackvm__Ast.cmx"
+  "_build/install/default/lib/jackvm/jackvm__Parser.cmi"
+  "_build/install/default/lib/jackvm/jackvm__Parser.cmt"
+  "_build/install/default/lib/jackvm/jackvm__Parser.cmx"
+  "_build/install/default/lib/jackvm/jackvm__Translator.cmi"
+  "_build/install/default/lib/jackvm/jackvm__Translator.cmt"
+  "_build/install/default/lib/jackvm/jackvm__Translator.cmx"
+  "_build/install/default/lib/jackvm/opam"
+  "_build/install/default/lib/jackvm/parser.ml"
+  "_build/install/default/lib/jackvm/translator.ml"
+]
+libexec: [
+  "_build/install/default/lib/jackvm/jackvm.cmxs"
+]
+bin: [
+  "_build/install/default/bin/jackvm"
+]

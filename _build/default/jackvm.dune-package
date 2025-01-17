@@ -1,0 +1,60 @@
+(lang dune 3.16)
+(name jackvm)
+(sections (lib .) (libexec .) (bin ../../bin))
+(files
+ (lib
+  (META
+   ast.ml
+   dune-package
+   jackvm.a
+   jackvm.cma
+   jackvm.cmi
+   jackvm.cmt
+   jackvm.cmx
+   jackvm.cmxa
+   jackvm.ml
+   jackvm__Ast.cmi
+   jackvm__Ast.cmt
+   jackvm__Ast.cmx
+   jackvm__Parser.cmi
+   jackvm__Parser.cmt
+   jackvm__Parser.cmx
+   jackvm__Translator.cmi
+   jackvm__Translator.cmt
+   jackvm__Translator.cmx
+   opam
+   parser.ml
+   translator.ml))
+ (libexec (jackvm.cmxs))
+ (bin (jackvm)))
+(library
+ (name jackvm)
+ (kind normal)
+ (archives (byte jackvm.cma) (native jackvm.cmxa))
+ (plugins (byte jackvm.cma) (native jackvm.cmxs))
+ (native_archives jackvm.a)
+ (main_module_name Jackvm)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name jackvm)
+     (visibility public)
+     (kind alias)
+     (source (path Jackvm) (impl (path jackvm.ml-gen))))
+    (name Jackvm)
+    (modules
+     (module
+      (obj_name jackvm__Ast)
+      (visibility public)
+      (source (path Ast) (impl (path ast.ml))))
+     (module
+      (obj_name jackvm__Parser)
+      (visibility public)
+      (source (path Parser) (impl (path parser.ml))))
+     (module
+      (obj_name jackvm__Translator)
+      (visibility public)
+      (source (path Translator) (impl (path translator.ml))))))
+   (wrapped true))))
